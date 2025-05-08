@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500&display=swap');
+        
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0f1a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+.futuristic-font {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.glow {
+    box-shadow: 0 0 15px rgba(0, 219, 222, 0.5);
+}
+
+.glow:hover {
+    box-shadow: 0 0 25px rgba(0, 219, 222, 0.8);
+}
+
+.neon-border {
+    border: 1px solid rgba(0, 219, 222, 0.3);
+    position: relative;
+}
+
+.neon-border::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid rgba(0, 219, 222, 0.2);
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+.qr-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.qr-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,219,222,0.1) 0%, rgba(0,0,0,0) 70%);
+    animation: rotate 15s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to bottom, transparent, #00dbde, transparent);
+    animation: scan 2.5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
