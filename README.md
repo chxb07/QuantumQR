@@ -31,7 +31,7 @@ QuantumQR is a cutting-edge web application that allows users to generate custom
 
 ## Live Demo 🌐
 
-[View Live Demo](#) (Add your deployment link here)
+(https://chxb07.github.io/QuantumQR/)
 
 ## Installation (Local Development) 💻
 
